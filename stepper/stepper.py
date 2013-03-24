@@ -11,6 +11,7 @@ dir_pin = 17
 #gpio pin 14 is pin 8
 pwm_pin = 14
 
+
 #setup the pins
 RPIO.setup(step_pin, RPIO.OUT, initial=RPIO.LOW)
 RPIO.setup(dir_pin, RPIO.OUT, initial=RPIO.LOW)
