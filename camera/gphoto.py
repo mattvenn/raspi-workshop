@@ -1,7 +1,9 @@
 #!/usr/bin/python
 
+#import the library to call external commands
 import os
 
+#this function takes a photo using the gphoto2 command
 def capture_image():
     time=25 # 1/20s
     shootmode=1 #time priority
@@ -16,5 +18,6 @@ def capture_image():
     status = os.system(command)  
     return status
 
+#if this script is run from the command line...
 if __name__=="__main__":  
     capture_image()
