@@ -19,4 +19,4 @@ pfu.addDatapoint('uptime', uptime)
 
 # finish up and submit the data
 pfu.buildUpdate()
-print pfu.sendUpdate()
+pfu.sendUpdate()
