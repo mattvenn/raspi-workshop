@@ -7,6 +7,7 @@ The stepper board's wiring details are on the workshop resources. Take care to w
 # Important notes!
 
 * When you connect the power, check the temperature of the chip on the driver board. If it gets hot immediately, turn off the power and ask for help.
+* The driver chip does heat up after extended use.
 * Don't disconnect or connect the motor while power is connected - this will break the driver board.
 
 # Connections
