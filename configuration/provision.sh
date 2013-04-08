@@ -1,6 +1,12 @@
 #!/bin/bash
+#author: matt venn
 
-hostname=raspberrypi4
+if [ "$#" -ne 1 ] ; then
+        echo "$0: hostname required"
+        exit 1
+fi
+hostname=$1
+echo using $hostname for hostname
 echo $hostname > /etc/hostname
 sed -e "s/raspberrypi$/$hostname/" /etc/hosts > /tmp/hosts
 mv /tmp/hosts /etc/hosts
