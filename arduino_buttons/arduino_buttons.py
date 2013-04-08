@@ -13,6 +13,15 @@ serial_port.open()
 while True:
     response = serial_port.readline()
     button = int(response.strip())
-    print "got button #%d" % button
-    if button == 1:
-        print "raspberry pi!"
+
+    #depending on what button is pressed, do different things
+    if button == 0:
+        print "green"
+    elif button == 1:
+        print "pink"
+    elif button == 2:
+        print "blue"
+    elif button == 3:
+        print "yellow"
+    else:
+        print "don't know that button"
