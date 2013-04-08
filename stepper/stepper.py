@@ -4,7 +4,8 @@ author: matt venn"
 """
 
 #import the RPIO library
-from RPIO import PWM, RPIO
+from RPIO import PWM
+import RPIO
 import time
 
 #gpio pin 4 is pin 7 on the p1 header
@@ -24,7 +25,7 @@ dma_channel=0
 PWM.init_channel(dma_channel,20000)
 
 #this pwm setting causes the demo motor to draw 250mA
-PWM.add_channel_pulse(dma_channel, pwm_pin, 0, 1500)
+PWM.add_channel_pulse(dma_channel, pwm_pin, 0, 1900)
 
 #a variable to know if we should go forwards or backwards
 dir = False
