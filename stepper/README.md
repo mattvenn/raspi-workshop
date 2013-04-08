@@ -10,6 +10,14 @@ Don't disconnect or connect the motor while power is connected - this will break
 
 # Connections
 
+The stepper driver needs 3 connections from the pi:
+
+* step: take a step in the direction specified
+* dir: which direction to step in
+* pwm: we can control the current in the stepper motor (and hence it's strength) using the pwm control.
+
+In total, these are the connections needed:
+
 * connect pi pin 7 to the step pin of the driver board
 * connect pi pin 11 to the dir pin of the driver board
 * connect pi pin 8 to the pwm pin of the driver board
