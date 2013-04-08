@@ -1,7 +1,7 @@
 # Detecting a person's movement
 
 We're using a PIR (passive infra red sensor) from oomlout: http://www.oomlout.co.uk/motion-detector-pir-p-276.html
-When people move, the sensor's output pin goes high.
+When people move, the sensor's output pin goes high. The sensor is very sensitive, especially when movement is close by.
 
 # Connections
 
