@@ -1,4 +1,4 @@
-# detecting a person's movement
+# Detecting a person's movement
 
 We're using a PIR (passive infra red sensor) from oomlout: http://www.oomlout.co.uk/motion-detector-pir-p-276.html
 When people move, the sensor's output pin goes high.
