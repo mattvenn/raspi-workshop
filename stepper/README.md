@@ -4,9 +4,10 @@ Stepper motors are powerful and capable of moving a specific number of steps in 
 
 The stepper board's wiring details are on the workshop resources. Take care to wire it up correctly as a misconnection could damage the driver board or the pi. If in doubt, ask!
 
-# Important note!
+# Important notes!
 
-Don't disconnect or connect the motor while power is connected - this will break the driver board.
+* When you connect the power, check the temperature of the chip on the driver board. If it gets hot immediately, turn off the power and ask for help.
+* Don't disconnect or connect the motor while power is connected - this will break the driver board.
 
 # Connections
 
