@@ -1,3 +1,4 @@
+This example shows reading data from an I2C device. I2C is like USB for microcontrollers. It's an easy way of adding strings of peripherals to the raspberry pi. The raspberry pi also supports SPI which is similar but requires an extra pin.
 
 thanks to John Neek for the c code:
 http://www.john.geek.nz/2013/02/update-bosch-bmp085-source-raspberry-pi/
