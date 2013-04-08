@@ -1,4 +1,7 @@
 #!/usr/bin/python
+"""
+author: matt venn
+"""
 
 #import the cosm library
 from CosmFeedUpdate import *
