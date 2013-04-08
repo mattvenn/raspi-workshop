@@ -8,9 +8,16 @@ servo = PWM.Servo()
 #gpio pin 14 is pin 8
 servo_pin = 14
 
+#start and stop angles
+start_pwm = 2000
+end_pwm = 4000
+
 while True:
+	print "CW"
 	# Set a 4000us (4ms) pulse every 20ms for GPIO 14:
-	servo.set_servo(servo_pin, 4000)
+	servo.set_servo(servo_pin, start_pwm)
 	time.sleep(0.5)
-	servo.set_servo(servo_pin, 2000)
+
+	print "CCW"
+	servo.set_servo(servo_pin, end_pwm)
 	time.sleep(0.5)
