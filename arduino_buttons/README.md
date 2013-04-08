@@ -4,7 +4,7 @@ Uses an arduino to fetch external data. This can be a useful way of getting more
 
 # Connections
 
-Connect the arduino button box to the raspberry pi with a USB cable.
+* Connect the arduino button box to the raspberry pi with a USB cable.
 
 # Other information
 
