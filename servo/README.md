@@ -7,8 +7,8 @@ We set the angle of the servo by pulsing a pin on the raspberry pi. The length o
 # connections
 
 * attach a servo to pin 8 of the pi.
-* connect the usb power lead from the powered hub to the + and - rails on the breadboard.
-* connect the ground of the raspberry pi (pin 6) to the - rail on the breadboard.
+* connect the usb power lead from the powered hub to the + and - rails on the breadboard
+* connect the ground of the raspberry pi (pin 6) to the - rail on the breadboard
 * connect a wire from the - rail on the breadboard to the black wire of the servo
 * connect a wire from the + rail on the breadboard to the red wire on the servo
 

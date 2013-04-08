@@ -11,8 +11,8 @@ serial_port.baudrate=9600
 serial_port.open()
 
 while True:
-	response = serial_port.readline()
-	button = int(response.strip())
-	for num in range(4):
-		if button == num:
-			print "got button #%d" % num
+    response = serial_port.readline()
+    button = int(response.strip())
+    print "got button #%d" % button
+    if button == 1:
+        print "raspberry pi!"

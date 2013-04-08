@@ -12,7 +12,7 @@ def capture_image():
     output = 'frame.jpg'
     command = "fswebcam  --no-banner -r 800x600 -d /dev/video0 %s" % output
     #command = "fswebcam --set brightness=50%% --no-banner -r 800x600 -d /dev/video0 %s" % output
-    status = os.system(command)	
+    status = os.system(command)
     return status
 
 

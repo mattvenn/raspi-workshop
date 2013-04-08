@@ -32,16 +32,14 @@ dir = False
 
 #then in a loop, step the motor forwards and backwards
 while True:
-	print dir
-  #move 50 steps
-	for i in range(50):
-		RPIO.output(step_pin, True)
-		time.sleep(0.01)
-		RPIO.output(step_pin, False)
-		time.sleep(0.01)
+    print dir
+    #move 50 steps
+    for i in range(50):
+        RPIO.output(step_pin, True)
+        time.sleep(0.01)
+        RPIO.output(step_pin, False)
+        time.sleep(0.01)
 
-  
-  #change direction
-	RPIO.output(dir_pin, dir)
-	dir = not dir
-	
+    #change direction
+    RPIO.output(dir_pin, dir)
+    dir = not dir
