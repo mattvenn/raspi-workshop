@@ -4,12 +4,13 @@ author: matt venn
 """
 
 #import the PWM part of the RPIO library
-from RPIO import PWM
+import RPIO,RPIO.PWM
+RPIO.setwarnings(False)
 #import the time library
 import time
 
 #create the servo object
-servo = PWM.Servo()
+servo = RPIO.PWM.Servo()
 
 #gpio pin 14 is pin 8 on the pi
 servo_pin = 14
