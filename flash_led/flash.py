@@ -2,6 +2,7 @@
 
 #import the library to control the GPIO pins
 import RPIO
+RPIO.setwarnings(False)
 
 #import the time library
 import time
