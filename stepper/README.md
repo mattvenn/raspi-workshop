@@ -12,23 +12,23 @@ The stepper board's wiring details are on the workshop resources. Take care to w
 
 # Connections
 
-The stepper driver needs 3 connections from the pi:
+The stepper driver needs 4 connections from the pi:
 
 * step: take a step in the direction specified
 * dir: which direction to step in
-* pwm: we can control the current in the stepper motor (and hence it's strength) using the pwm control.
+* sleep: the driver is asleep to save power, we need to turn this pin high to wake it up
+* ground: to create the electrical circuit, we need a ground connection
 
 In total, these are the connections needed:
 
 * connect pi pin 7 to the step pin of the driver board
 * connect pi pin 11 to the dir pin of the driver board
-* connect pi pin 8 to the pwm pin of the driver board
+* connect pi pin 1 (+3.3v) to the sleep pin of the driver board
 * connect the ground pin of the driver board to the - rail on the breadboard
 * connect the ground of the raspberry pi (pin 6) to the - rail on the breadboard
-* connect a wire from the + rail on the breadboard to the logic psu pin on the driver board
 * connect a wire from the + rail on the breadboard to the stepper psu pin on the driver board
 * connect the usb power lead from the powered hub to the + and - rails on the breadboard
 
 # Other information
 
-The driver chip we're using is the Allegro 3967: http://www.allegromicro.com/Products/Motor-Driver-And-Interface-ICs/Bipolar-Stepper-Motor-Drivers/A3967.aspx
+We're using a driver board detailed here: http://www.pololu.com/catalog/product/2134
