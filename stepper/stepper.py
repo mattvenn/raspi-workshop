@@ -19,7 +19,7 @@ RPIO.setup(dir_pin, RPIO.OUT, initial=RPIO.LOW)
 #a variable to know if we should go forwards or backwards
 dir = False
 
-def step(dir,step_time=0.01):
+def step(dir=False,step_time=0.01):
     #set the direction
     RPIO.output(dir_pin, dir)
 
