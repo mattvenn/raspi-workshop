@@ -20,15 +20,15 @@ RPIO.setup(dir_pin, RPIO.OUT, initial=RPIO.LOW)
 dir = False
 
 #then in a loop, step the motor forwards and backwards
-
+sleep_time=0.01
 while True:
     print dir
     #move 50 steps
     for i in range(200):
         RPIO.output(step_pin, True)
-        time.sleep(0.005)
+        time.sleep(sleep_time)
         RPIO.output(step_pin, False)
-        time.sleep(0.005)
+        time.sleep(sleep_time)
 
     #change direction
     RPIO.output(dir_pin, dir)
