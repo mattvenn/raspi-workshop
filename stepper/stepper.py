@@ -19,17 +19,24 @@ RPIO.setup(dir_pin, RPIO.OUT, initial=RPIO.LOW)
 #a variable to know if we should go forwards or backwards
 dir = False
 
-#then in a loop, step the motor forwards and backwards
-sleep_time=0.01
-while True:
-    print dir
-    #move 50 steps
-    for i in range(200):
-        RPIO.output(step_pin, True)
-        time.sleep(sleep_time)
-        RPIO.output(step_pin, False)
-        time.sleep(sleep_time)
-
-    #change direction
+def step(dir,step_time=0.01):
+    #set the direction
     RPIO.output(dir_pin, dir)
-    dir = not dir
+
+    #take a step
+    RPIO.output(step_pin, True)
+    time.sleep(step_time)
+    RPIO.output(step_pin, False)
+    time.sleep(step_time)
+
+
+#if this script is run from the command line...
+if __name__=="__main__":  
+    while True:
+        for i in range(200):
+            step(dir)
+
+        #change direction
+        dir = not dir
+        print dir
+
