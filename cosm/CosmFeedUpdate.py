@@ -7,7 +7,7 @@ import mechanize
 import json
 import time
 
-class PachubeFeedUpdate:
+class CosmFeedUpdate:
 
   _url_base = "http://api.pachube.com/v2/feeds/"
   _feed_id = None
@@ -22,7 +22,7 @@ class PachubeFeedUpdate:
     self._version = "1.0.0"
     self._feed_id = feed_id
     self._opener = mechanize.build_opener()
-    self._opener.addheaders = [('X-PachubeApiKey',apikey)]
+    self._opener.addheaders = [('X-ApiKey',apikey)]
     self._data = []
     self._payload = {}
 
