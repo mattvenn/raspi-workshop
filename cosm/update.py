@@ -12,7 +12,7 @@ key=open(keyfile).readlines()[0].strip()
 
 #feed id, this is one I've got ready for the workshop - you'd need to setup your own at cosm.com
 feed_id = "120508"
-pfu = PachubeFeedUpdate(feed_id,key)
+pfu = CosmFeedUpdate(feed_id,key)
 
 #open a special file that stores how long the raspberry has been running for
 f=open("/proc/uptime","r");
