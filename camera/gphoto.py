@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 #import the library to call external commands
 import os
 
@@ -18,6 +16,5 @@ def capture_image():
     status = os.system(command)  
     return status
 
-#if this script is run from the command line...
-if __name__=="__main__":  
-    capture_image()
+#take a photo
+capture_image()

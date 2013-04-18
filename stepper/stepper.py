@@ -1,4 +1,3 @@
-#!/usr/bin/python
 """
 author: matt venn"
 """
@@ -30,13 +29,11 @@ def step(dir=False,step_time=0.01):
     time.sleep(step_time)
 
 
-#if this script is run from the command line...
-if __name__=="__main__":  
-    while True:
-        for i in range(200):
-            step(dir)
+while True:
+    for i in range(200):
+        step(dir)
 
-        #change direction
-        dir = not dir
-        print dir
+    #change direction
+    dir = not dir
+    print dir
 

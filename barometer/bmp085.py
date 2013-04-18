@@ -1,4 +1,3 @@
-#!/usr/bin/python
 """
 author: matt venn, based on Adafruit's example
 """
@@ -14,9 +13,7 @@ def read_sensor():
 	altitude = bmp.readAltitude()
 	return( temp,pressure,altitude )
 
-#if this script is run from the command line...
-if __name__=="__main__":  
-	(temp,pressure,altitude)=read_sensor()
-	print "Temperature: %.2f C" % temp
-	print "Pressure:    %.2f hPa" % (pressure / 100.0)
-	print "Altitude:    %.2f" % altitude
+(temp,pressure,altitude)=read_sensor()
+print "Temperature: %.2f C" % temp
+print "Pressure:    %.2f hPa" % (pressure / 100.0)
+print "Altitude:    %.2f" % altitude

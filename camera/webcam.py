@@ -1,4 +1,3 @@
-#!/usr/bin/python
 """
 author: matt venn
 """
@@ -15,6 +14,5 @@ def capture_image(filename="frame.jpg"):
     return status
 
 
-#if this script is run from the command line...
-if __name__=="__main__":  
-    capture_image()
+#take a photo
+capture_image()
