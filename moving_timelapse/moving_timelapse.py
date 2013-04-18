@@ -25,4 +25,4 @@ for step in range(num_photos):
     stepper.step()
 
     #time delay, camera takes
-    time.sleep(sleep_time-camera_delay)
+    time.sleep(sleep_time)
