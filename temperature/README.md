@@ -15,4 +15,4 @@ See the image here: http://webshed.org/wiki/File:Fritzing_rPI_DS1820.png
 
 # More information
 
-	The ds18b20 is made by maxim. The datasheet is here: http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf
+The ds18b20 is made by maxim. The datasheet is here: http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf
