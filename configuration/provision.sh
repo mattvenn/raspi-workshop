@@ -13,12 +13,11 @@ mv /tmp/hosts /etc/hosts
 
 apt-get update
 apt-get -y install ipython
-apt-get -y install git
 
-#our repo - doesn't seem to work still
-mkdir /home/pi/.ssh
-echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> /home/pi/.ssh/config
-git clone git@github.com:/mattvenn/raspi-workshop.git
+#our repo
+wget https://github.com/mattvenn/raspi-workshop/archive/master.zip
+unzip master.zip
+mv raspi-workshop-master raspi-workshop
 
 #for remote login with hostname
 apt-get -y install avahi-daemon libnss-mdns
