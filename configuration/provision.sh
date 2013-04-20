@@ -24,7 +24,8 @@ git clone git@github.com:/mattvenn/raspi-workshop.git
 apt-get -y install avahi-daemon libnss-mdns
 
 #for easy python package install
-apt-get -y install python-pip
+#apt-get -y install python-pip, this installs another python
+apt-get -y install python-setuptools
 
 #modules for i2c and heartbeat
 echo i2c-bcm2708  >> /etc/modules
@@ -48,9 +49,9 @@ apt-get -y install i2c-tools
 apt-get -y install python-dev
 
 #python libs for our workshop demos
-pip install RPIO
-pip install mechanize
-pip install pyserial
+easy_install RPIO
+easy_install mechanize
+easy_install pyserial
 
 #other programs
 apt-get install -y fswebcam
