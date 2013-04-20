@@ -52,6 +52,7 @@ apt-get -y install python-dev
 easy_install RPIO
 easy_install mechanize
 easy_install pyserial
+easy_install tweepy
 
 #other programs
 apt-get install -y fswebcam
