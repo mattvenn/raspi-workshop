@@ -9,15 +9,18 @@ import time
 led_pin = 14
 
 #setup the pin, and make it be off to start with
-RPIO.setup(led_pin, RPIO.OUT, initial=RPIO.LOW)
+RPIO.setup(led_pin, RPIO.OUT)
 
 #in a loop:
 while True:
     #turn on the led
+    print True
     RPIO.output(led_pin, True)
     #wait for 0.5 seconds
     time.sleep(0.5)
+
     #turn off the led
+    print False
     RPIO.output(led_pin, False)
     #sleep again
     time.sleep(0.5)
