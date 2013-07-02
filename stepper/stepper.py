@@ -6,11 +6,10 @@ author: matt venn"
 import RPIO
 import time
 RPIO.setwarnings(False)
+RPIO.setmode(RPIO.BOARD)
 
-#gpio pin 4 is pin 7 on the p1 header
-step_pin = 4
-#gpio pin 17 is pin 11 on the p1 header
-dir_pin = 17
+step_pin = 7
+dir_pin = 11
 #setup the pins
 RPIO.setup(step_pin, RPIO.OUT, initial=RPIO.LOW)
 RPIO.setup(dir_pin, RPIO.OUT, initial=RPIO.LOW)
