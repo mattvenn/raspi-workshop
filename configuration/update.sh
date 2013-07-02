@@ -6,6 +6,8 @@ git clone git@github.com:mattvenn/raspi-adventure.git
 rm -rf raspi-workshop/
 git clone git@github.com:mattvenn/raspi-workshop.git
 
+sudo pip install RPi.GPIO --upgrade
+
 #install vnc
 sudo apt-get install tightvncserver
 
