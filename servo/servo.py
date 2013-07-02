@@ -2,25 +2,28 @@
 author: matt venn
 """
 
-#import the PWM part of the RPIO library
-import RPIO,RPIO.PWM
-RPIO.setwarnings(False)
+#import the PWM part of the GPIO library
+import RPi.GPIO as GPIO
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
 #import the time library
 import time
 
-#create the servo object
-servo = RPIO.PWM.Servo()
-
-#gpio pin 14 is pin 8 on the pi
-servo_pin = 14
+servo_pin = 8
+GPIO.setup(servo_pin, GPIO.OUT)
+freq = 1/0.02
+p = GPIO.PWM(servo_pin, freq)
+p.start(3)
 
 #forever...
 while True:
-    #change the angle by changing the PWM pulse width
-    servo.set_servo(servo_pin, 4000)
+    #change the angle by changing the PWM pulse width, this works between 1 and 10
+    print True
+    p.ChangeDutyCycle(3)
     #sleep
     time.sleep(0.5)
+    print False
     # change the angle
-    servo.set_servo(servo_pin, 2000)
+    p.ChangeDutyCycle(5)
     #sleep
     time.sleep(0.5)
