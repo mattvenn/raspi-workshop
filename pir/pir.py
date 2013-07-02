@@ -3,15 +3,19 @@ author: matt venn
 """
 
 #the library for the pin control
-import RPIO
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
 
-#gpio pin 4 is pin 7 on the p1 header
-pir_pin = 4
+pir_pin = 8
 
-#the interrupt function
-def int(gpio_id, value):
-    print "something happened!"
+#set the pin to be high to start, low when pressed
+GPIO.setup(pir_pin,GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-#setup the interrupt so it get's called with the output from the sensor goes high
-RPIO.add_interrupt_callback(pir_pin, int, edge='rising')
-RPIO.wait_for_interrupts()
+print "waiting..."
+while True:
+    if GPIO.input(pir_pin) == True:
+        print "pir detected"
+        while GPIO.input(pir_pin) == True:
+            #wait for the pin to go low
+            pass
+        print "waiting..."
