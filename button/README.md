@@ -1,8 +1,10 @@
-# Interrupts
+# Detecting a button press
 
-Interrupts provide a way of listening to a button (or other input) connected to a pin. Instead of checking every second (called polling) to see if the pin is changed, we can attach an interrupt. Then our code is interrupted when something happens.
+To detect if a button is pressed we need to make something change when the button is pressed. Either we can have the voltage on the pin be high, and when we press the button it goes low - or the other way round.
 
-The python script connects gpio4 pullup resistor, and an interrupt is called if gpio4 goes low
+To make the voltage on the pin be high, we use a pull up resistor. This is a resistor connected between the pin, and the raspberry pi's 3.3v. Then we can wire the button between the pin and the raspberry pi's 0v (also called ground).
+
+Luckily we can avoid adding a resistor, because we can use the RPIO library to turn on an internal pull up resistor (pull down is also available). Have a look at the code to see how this is done.
 
 # Connections
 
