@@ -8,4 +8,4 @@ We can use PWM for fading an LED.
 
 # Connections
 
-add an LED and a resistor in series to pin 8 of the header (gpio 14). There is an example circuit on the workshop resources.
+add an LED and a resistor in series to pin 8 of the header. There is an example circuit on the workshop resources.
