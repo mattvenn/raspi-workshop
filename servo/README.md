@@ -2,7 +2,9 @@
 
 servos provide an easy way to create movement. They need an external power supply - the raspberry pi isn't powerful enough. We'll use the powered hub to provide the power using a special lead.
 
-We set the angle of the servo by pulsing a pin on the raspberry pi. The length of time the pulse is on for sets the angle of the servo. Luckily for us, the RPIO library has some features for controlling servos. Check the code to see how.
+We set the angle of the servo by pulsing a pin on the raspberry pi. The length of time the pulse is on for sets the angle of the servo. Luckily for us, the GPIO library has some features for controlling servos. Check the code to see how.
+
+Using the GPIO library, we can only control the servo crudely, with the 180 degrees of the movement chopped up into 10 sections. For finer control we could use a different library, called RPIO.PWM
 
 # connections
 
@@ -14,4 +16,5 @@ We set the angle of the servo by pulsing a pin on the raspberry pi. The length o
 
 # Other information
 
-using the PWM library: http://pythonhosted.org/RPIO/pwm_py.html
+using the GPIO PWM library: https://code.google.com/p/raspberry-gpio-python/wiki/PWM
+using the RPIO.PWM library: http://pythonhosted.org/RPIO/pwm_py.html
