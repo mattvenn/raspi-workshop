@@ -10,7 +10,7 @@ GPIO.setmode(GPIO.BOARD)
 button_pin = 8
 
 #set the pin to be high to start, low when pressed
-RPIO.setup(button_pin,GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button_pin,GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 while True:
     if GPIO.input(button_pin) == False:
