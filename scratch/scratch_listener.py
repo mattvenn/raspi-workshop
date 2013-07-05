@@ -11,13 +11,13 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 
 
-led_pin = 10
+led_pin = 8
 
 #setup the pin, and make it be off to start with
 GPIO.setup(led_pin, GPIO.OUT)
 
 
-ip = '10.42.0.1'
+ip = '127.0.1.1'
 port = 42001
 if len(sys.argv) == 2:
     ip = sys.argv[1]
