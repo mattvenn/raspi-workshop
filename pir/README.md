@@ -8,5 +8,5 @@ When people move, the sensor's output pin goes high. The sensor is very sensitiv
 Gotcha - the wires from the PIR are not the normal colours. Ground is blue, and output is black.
 
 * connect the PIR's ground pin to the pi's ground pin (6)
-* connect the PIR's + pin to the pi's 3.3v pin (1)
-* connect the PIR's output pin to pin 7 on the pi
+* connect the PIR's + pin to the pi's 5v pin (2)
+* connect the PIR's output pin to pin 8 on the pi
