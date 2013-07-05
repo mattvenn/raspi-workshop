@@ -8,4 +8,4 @@ Luckily we can avoid adding a resistor, because we can use the GPIO library to t
 
 # Connections
 
-* Connect a button between pins 7 and 9 (gpio4 and ground).
+* Connect a button between pins 8 and 9.
