@@ -17,7 +17,7 @@ GPIO.setup(dir_pin, GPIO.OUT, initial=GPIO.LOW)
 #a variable to know if we should go forwards or backwards
 dir = False
 
-def step(dir=False,step_time=0.01):
+def step(dir,step_time):
     #set the direction
     GPIO.output(dir_pin, dir)
 
@@ -30,7 +30,7 @@ def step(dir=False,step_time=0.01):
 
 while True:
     for i in range(200):
-        step(dir)
+        step(dir,0.01)
 
     #change direction
     dir = not dir
