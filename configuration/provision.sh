@@ -23,8 +23,7 @@ mv raspi-workshop-master raspi-workshop
 apt-get -y install avahi-daemon libnss-mdns
 
 #for easy python package install
-#apt-get -y install python-pip, this installs another python
-apt-get -y install python-setuptools
+apt-get -y install python-pip
 
 #modules for i2c and heartbeat
 echo i2c-bcm2708  >> /etc/modules
@@ -44,14 +43,16 @@ chmod a+x /etc/rc.local
 apt-get -y install python-smbus
 apt-get -y install i2c-tools
 
-#for rpio
+#for gpio
 apt-get -y install python-dev
 
 #python libs for our workshop demos
-easy_install RPIO
-easy_install mechanize
-easy_install pyserial
-easy_install tweepy
+pip install RPi.GPIO
+pip install mechanize
+pip install pyserial
+pip install Twython
+pip install scratch
+pip install SimpleHTTPServer
 
 #other programs
 apt-get install -y fswebcam
