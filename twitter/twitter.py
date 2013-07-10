@@ -1,32 +1,37 @@
-"""
-author: matt venn
-"""
-
-from datetime import datetime
+from twython import Twython
 import os
+from datetime import datetime
 
-#the twitter library
-import tweepy
-from tweepy import OAuthHandler
+#this demo posts tweets from piworkshop (https://twitter.com/piworkshop)
 
-#here are all the secret keys. If people know these they can pretend they are you
-consumer_key= "fF86BdSdopE9FAES5UNgPw"
-consumer_secret= "n7G4K80kYQ6NDMQiYn3GY5Hyk82fF2So17Nl1UQdGWE"
+#authenticate, check the README.md for how to set up your own account
+twitter = Twython(
+    #consumer key
+    "fF86BdSdopE9FAES5UNgPw",
+    #consumer secret
+    "n7G4K80kYQ6NDMQiYn3GY5Hyk82fF2So17Nl1UQdGWE",
+    #access_token
+    "1336977176-4CgpPJnJBx7kCRqnwLcRbXI3nLpHj44sp3r2bXy",
+    #access_token_secret
+    "5rLNvZm3JZdkx0K1Jx9jgsqMG6MmGLAQmPdJ7ChtzA",
+)
 
-access_token= "1336977176-4CgpPJnJBx7kCRqnwLcRbXI3nLpHj44sp3r2bXy"
-access_token_secret= "5rLNvZm3JZdkx0K1Jx9jgsqMG6MmGLAQmPdJ7ChtzA"
-
-#create the auth and access tokens
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
-
-#get the api
-api = tweepy.API(auth)
-print "my twitter name:",  api.me().name
-
-#get the bits of information we want to tweet
+#post a new tweet, use the hostname and time to make it unique
 hostname = os.uname()[1]
 time = datetime.now()
+message = "the time on %s is %s" % ( hostname, time )
+print "sending..."
+twitter.update_status(status=message)
+print "sent"
 
-#make the post
-api.update_status("the time on %s is %s" % ( hostname, time ))
+#send a picture tweet
+#photo = open('pic.jpg', 'rb')
+#twitter.update_status_with_media(media=photo, status='picture tweet')
+
+#get our timeline and print latest 5 out
+print "timeline:"
+timeline = twitter.get_user_timeline()
+for tweet in timeline[0:5]:
+    #just show the text
+    print "-> " + tweet["text"]
+
