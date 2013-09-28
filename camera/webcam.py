@@ -6,7 +6,7 @@ author: matt venn
 import os
 
 #this function takes a photo using the fswebcam command
-def capture_image(filename="frame.jpg"):
+def capture_image(filename):
     #this can do banners and timestamps
     command = "fswebcam  --no-banner -r 800x600 -d /dev/video0 %s" % filename
     #command = "fswebcam --set brightness=50%% --no-banner -r 800x600 -d /dev/video0 %s" % filename
@@ -15,4 +15,4 @@ def capture_image(filename="frame.jpg"):
 
 
 #take a photo
-capture_image()
+capture_image('picture.jpg')
