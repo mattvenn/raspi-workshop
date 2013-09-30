@@ -8,7 +8,7 @@ import time
 
 led_pin = 8
 
-#setup the pin, and make it be off to start with
+#set the pin to be an output
 GPIO.setup(led_pin, GPIO.OUT)
 
 #in a loop:
