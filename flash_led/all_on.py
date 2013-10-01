@@ -11,5 +11,3 @@ for pin in pins:
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, True)
 
-#cleanup
-GPIO.cleanup()
