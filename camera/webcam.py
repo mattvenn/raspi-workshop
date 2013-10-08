@@ -10,6 +10,7 @@ def capture_image(filename):
     #the fswebcam command can also do banners and timestamps
     command = "fswebcam  --no-banner -r 800x600 -d /dev/video0 " + filename
     status = os.system(command)
+    print "taken photo!"
     return status
 
 
