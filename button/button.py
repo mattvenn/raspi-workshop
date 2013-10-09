@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 
-button_pin = 8
+button_pin = 16
 
 #set the pin to be high to start, low when pressed
 GPIO.setup(button_pin,GPIO.IN, pull_up_down=GPIO.PUD_UP)
