@@ -34,5 +34,5 @@ while True:
 
     #change direction
     dir = not dir
-    print dir
+    print(dir)
 

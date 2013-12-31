@@ -51,7 +51,7 @@ int("5") #converts a string to an int
 float("5.0") #a string to a float
 str(5.2) #an int or a float to a string
 
-print "hello " + str(5.2)
+print("hello " + str(5.2))
 
 
 #variables, assign with =
@@ -64,22 +64,23 @@ my_str * my_num
 
 
 #getting user input
-name = raw_input("what's your name? ")
-print name
-number = int(raw_input("type a number? "))
-print number
+name = input("what's your name? ")
+print(name)
+number = int(input("type a number? "))
+print(number)
 
 #challenge! 
-#write a program that asks your name and 
-#then prints it out 10 times
+#write a program that asks your name and how many times to print it
+#then prints your name that number of times
 
 
 
 
 
 
-name = raw_input("your name? ") 
-print name * 10
+name = input("your name? ") 
+number = input("number of times? ") 
+print(name * int(number))
 
 
 
@@ -95,8 +96,8 @@ print name * 10
 
 
 
-my_number = raw_input("a number? ")
-print int(my_number) * int(my_number)
+my_number = input("a number? ")
+print(int(my_number) * int(my_number))
 
 
 
@@ -119,11 +120,11 @@ my_str == "hello"
 
 time = 12
 if time < 12:
-    print "morning!"
+    print("morning!")
 elif time >= 12 and time < 18:
-    print "afternoon!"
+    print("afternoon!")
 else:
-    print "evening!"
+    print("evening!")
     
 
 
@@ -136,17 +137,44 @@ else:
 
 secret = 10
 
-guess = int(raw_input("a number? "))
+guess = int(input("a number? "))
 
 if guess == secret:
-    print "you got it right!"
+    print("you got it right!")
 elif guess < secret:
-    print "higher"
+    print("higher")
 else:
-    print "lower"
+    print("lower")
 
 
 
+
+
+
+
+#challenge! write a simple user interface to:
+
+#if the user types 1, print hello
+#if the user types 2, print goodbye
+#otherwise say "computer says no"
+
+
+
+
+
+
+
+
+
+print("press 1 to say hello")
+print("press 2 to say goodbye")
+choice = int(input("your choice? "))
+if choice == 1:
+    print("hello")
+elif choice == 2:
+    print("goodbye")
+else:
+    print("computer says no")
 
 
 
@@ -155,30 +183,34 @@ else:
 #loops!
 #loop forever
 while True:
-    print "hello"
-    print "matt"
+    print("hello")
+    print("matt")
+    break
 
 
 
 #loop for a certain number of times
 loops = 0
 while loops < 10:
-    print loops
+    print(loops)
     loops = loops + 1
 
 #beginners - jump to library import below...
 
 
 
+
+
+
 #break out of a loop
 while True:
-    password = raw_input("password: ")
+    password = input("password: ")
 
     if password == "secret":
-        print "correct"
+        print("correct")
         break
     else:
-        print "wrong!"
+        print("wrong!")
 
 
 #challenge!
@@ -197,18 +229,18 @@ secret = 10
 while True:
     guesses = guesses + 1
     if guesses > 10:
-        print "too many guesses!"
+        print("too many guesses!")
         break
 
-    guess = int(raw_input("a number? "))
+    guess = int(input("a number? "))
 
     if guess == secret:
-        print "you got it right!"
+        print("you got it right!")
         break
     elif guess < secret:
-        print "higher"
+        print("higher")
     else:
-        print "lower"
+        print("lower")
 
 
 
@@ -239,9 +271,9 @@ time.sleep(5)
 
 import time
 while True:
-    print "hello"
+    print("hello")
     time.sleep(1)
-    print "world"
+    print("world")
     time.sleep(1)
     
 
@@ -262,7 +294,7 @@ random.randint(1,10)
 
 
 secret = random.randint(1,10)
-print "you have 10 guesses to pick a number from 1 to 10"
+print("you have 10 guesses to pick a number from 1 to 10")
 
 
 
@@ -272,7 +304,7 @@ print "you have 10 guesses to pick a number from 1 to 10"
 def my_func(a,b):
     return a * b
 
-print my_func(20,30)
+print(my_func(20,30))
 
 #challenge!
 #write a function that when you call with a number, 
@@ -289,15 +321,17 @@ print my_func(20,30)
 
 
 def times(number):
-    print "the " + str(number) + " times table"
+    print("the " + str(number) + " times table")
     loop = 1
     while loop <= 10:
-        print loop, loop * number
+        print(loop, loop * number)
         loop += 1
 
 times(5)
 times(3)
 
+#challenge!
+#now add something that asks you for the number.
 
 
 
@@ -305,19 +339,49 @@ times(3)
 
 
 
-#arrays
-array = [ "cat", 100.5, False ]
 
-print array[1]
 
-for i in array:
-    print i
 
-array = range(10)
 
+
+
+#sabotage!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#list
+my_list = [ "cat", "dog", "mouse" ]
+print(my_list[1])
+
+#joining lists into a string - contents of my_list must be strings
+":".join(my_list)
+
+#print each item in the list
+for i in my_list:
+    print(i)
+
+#an easy way to get a range of numbers
+my_list = range(10)
+
+#a simpler way of doing a loop a certain number of types
 for x in range(5,10):
-    print x
+    print(x)
 
+#splitting a string into an list
+string = "cat,dog,mouse"
+string.split(',')
 
 
 #challenge!
@@ -344,3 +408,127 @@ for table in range(1,11):
 
 
 
+
+
+"""
+exceptions
+remember the type conversions from the beginning? int(),str(),float()
+what happens when we try to convert a string to a float, 
+but the string doesn't contain a float?
+"""
+float("hello")
+
+"""
+we can handle exceptions with 2 new keywords, try and except
+"""
+try:
+    float("hello")
+except ValueError:
+    print("not a float")
+
+
+#challenge: write a little program that repeatedly asks for the user
+#to type a number, and it will only finish when user types a number
+#more than 0. The program must be able to handle the case when the 
+#user types in something that python can't convert to a number...
+
+
+
+
+
+
+
+
+
+
+while True:
+    try:
+        a = input("type a float more than 0: ")
+        a = float(a)
+        if a > 0:
+            break
+    except ValueError:
+        print("not a float")
+
+
+
+
+
+
+
+
+
+"""
+file IO (input/output)
+writing a file
+"""
+fh = open("myfile.txt",'w')
+fh.write("hello world")
+fh.close()
+
+
+    
+
+#file reading:
+fh = open("myfile.txt",'r')
+print(fh.readlines())
+
+
+
+"""
+challenge: write a program that reads all the lines of your file,
+and prints them out one after the other. 
+At the end, display how many lines there were in the file.
+"""
+
+
+
+
+
+
+
+
+
+fh = open("myfile.txt",'r')
+lines = fh.readlines()
+line_counter = 0
+for line in lines:
+    #python2 and 3 differ for suppressing newline with print()
+    print(line,end='') #python3 use the end argument set to nothing 
+    #print(line), #python2 use a comma after print()
+    line_counter += 1
+print("there were", line_counter, "lines in the file")
+
+
+
+"""
+challenge: go back to your times table example. Modify the program so 
+instead of printing to the screen, it writes each table to a separate
+file
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+#our function
+def times(number):
+    file_name = str(number) + ".txt"
+    fh = open(file_name,'w')
+    fh.write("the " + str(number) + " times table\n")
+    loop = 1
+    while loop <= 10:
+        fh.write( str(number) + " x " + str(loop) + " = " + str( loop * number ) + "\n")
+        loop += 1
+
+
+#run it for the first 10 tables
+for table in range(1,11):
+    times(table)

@@ -18,11 +18,11 @@ p.start(3)
 #forever...
 while True:
     #change the angle by changing the PWM pulse width, this works between 1 and 10
-    print True
+    print(True)
     p.ChangeDutyCycle(3)
     #sleep
     time.sleep(0.5)
-    print False
+    print(False)
     # change the angle
     p.ChangeDutyCycle(5)
     #sleep

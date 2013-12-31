@@ -16,7 +16,7 @@ num_photos = 400
 
 #take a lot of photos
 for step in range(num_photos):
-    print step
+    print(step)
 
     #take a photo
     webcam.capture_image(str(step)+".jpg")

@@ -15,12 +15,12 @@ while True:
 
     #depending on what button is pressed, do different things
     if button == 0:
-        print "green"
+        print("green")
     elif button == 1:
-        print "pink"
+        print("pink")
     elif button == 2:
-        print "blue"
+        print("blue")
     elif button == 3:
-        print "yellow"
+        print("yellow")
     else:
-        print "don't know that button"
+        print("don't know that button")

@@ -13,6 +13,6 @@ GPIO.setup(button_pin,GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 while True:
     if GPIO.input(button_pin) == False:
-        print "button pressed"
+        print("button pressed")
 
 

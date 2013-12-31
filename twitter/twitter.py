@@ -20,20 +20,20 @@ twitter = Twython(
 hostname = os.uname()[1]
 time = datetime.now()
 message = "the time on %s is %s" % ( hostname, time )
-print "sending a text tweet..."
+print("sending a text tweet...")
 twitter.update_status(status=message)
-print "sent"
+print("sent")
 
 #send a picture tweet
-print "sending a tweet with an image..."
+print("sending a tweet with an image...")
 photo = open('twitter.png', 'rb')
 twitter.update_status_with_media(media=photo, status=message + " with picture")
-print "sent"
+print("sent")
 
 #get our timeline and print latest 5 out
-print "timeline:"
+print("timeline:")
 timeline = twitter.get_user_timeline()
 for tweet in timeline[0:5]:
     #just show the text
-    print "-> " + tweet["text"]
+    print("-> " + tweet["text"])
 

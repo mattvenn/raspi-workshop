@@ -12,11 +12,11 @@ led_pin = 8
 GPIO.setup(led_pin, GPIO.OUT)
 
 #turn on the led
-print True
+print(True)
 GPIO.output(led_pin, True)
 #wait for 0.5 seconds
 time.sleep(0.5)
 
 #turn off the led
-print False
+print(False)
 GPIO.output(led_pin, False)

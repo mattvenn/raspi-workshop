@@ -22,14 +22,14 @@ port = 42001
 if len(sys.argv) == 2:
     ip = sys.argv[1]
 
-print "trying to connect to", ip, ":", port
+print("trying to connect to", ip, ":", port)
 try:
     s = scratch.Scratch(host=ip, port=port) 
-except scratch.ScratchError, e:
-    print "couldn't connect - is scratch running?"
-    print e
+except scratch.ScratchError as e:
+    print("couldn't connect - is scratch running?")
+    print(e)
     exit(1)
-print "connected"
+print("connected")
 
 def listen():
     while True:
@@ -42,10 +42,10 @@ for msg in listen():
     # code to handle broadcasts
     if msg[0] == 'broadcast':
         if msg[1] == 'on':
-            print "got on"
+            print("got on")
             GPIO.output(led_pin, True)
         elif msg[1] == 'off':
-            print "got off"
+            print("got off")
             GPIO.output(led_pin, False)
         else:
-            print "didn't recognise broadcast: ", msg
+            print("didn't recognise broadcast: ", msg)

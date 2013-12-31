@@ -17,7 +17,7 @@ class getHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
         #let the user do some things
         if self.path.startswith("/flash"):
-            print "flashing!"
+            print("flashing!")
             #run the flash.py program
             command = "python flash.py"
             status = os.system(command)
@@ -28,8 +28,8 @@ try:
     SocketServer.TCPServer.allow_reuse_address = True
     server = SocketServer.TCPServer(('',port), getHandler)
     
-    print "started serving on port", port
+    print("started serving on port", port)
     server.serve_forever()
 except KeyboardInterrupt:
-    print "quitting"
+    print("quitting")
     server.socket.close()

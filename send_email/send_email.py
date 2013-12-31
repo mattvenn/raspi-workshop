@@ -18,4 +18,4 @@ def send_email(recipient, subject, text):
     smtpserver.close()
 
 send_email('recipient@email.address', 'sub', 'this is text')
-print "sent"
+print("sent")

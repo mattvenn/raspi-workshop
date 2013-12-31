@@ -39,4 +39,4 @@ class CosmFeedUpdate:
     try:
       self._opener.open(url,json.dumps(self._payload))
     except mechanize.HTTPError as e:
-      print "An HTTP error occurred: %s " % e
+      print( "An HTTP error occurred: %s " % e)
